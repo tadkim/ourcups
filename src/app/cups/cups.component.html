@@ -1,0 +1,8 @@
+<div class="cup-container">
+    <div class="cup"
+        (click)="gotoDetail(cup.id)"
+        *ngFor="let cup of cups">
+        {{ cup.name }}
+    </div>
+</div>
+

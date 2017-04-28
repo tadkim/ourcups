@@ -1,0 +1,12 @@
+@import '../../assets/scss/global';
+
+.cup-container {
+    @include size(100%, auto);
+    @include flex(flex, row wrap);
+
+    .cup {
+        @include testBorder();
+        @include size(20%, 200px);
+        margin: 10px;
+    }
+}

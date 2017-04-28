@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* color */
+/* color : test lab */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+/*
+* 나눔스퀘어
+* Nanum Square
+*
+* SIL Open Font License 1.1
+* http://help.naver.com/ops/step2/faq.nhn?faqId=15879
+*/
+/*
+
+@font-face {
+  font-family: 'Nanum Square';
+  src: local('Nanum Square'), local('NanumSquare'), local('나눔스퀘어'), local(''), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nanum Square';
+  src: local('Nanum Square'), local('NanumSquare'), local('나눔스퀘어'), local(''), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-Regular.ttf') format('truetype'), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nanum Square';
+  src: local('Nanum Square'), local('NanumSquare'), local('나눔스퀘어'), local(''), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-Bold.ttf') format('truetype'), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nanum Square';
+  src: local('Nanum Square'), local('NanumSquare'), local('나눔스퀘어'), local(''), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+.nanum-square {
+  font-family: 'Nanum Square', sans-serif;
+}
+*/
+/* grid */
+header {
+  background-color: rgba(50, 0, 255, 0.1); }
+
+#wrap {
+  width: 960px;
+  height: auto;
+  margin: 0 auto; }
+  #wrap .content {
+    width: 100%;
+    height: auto;
+    margin: 10px auto; }
+
+footer {
+  background-color: rgba(50, 0, 255, 0.1);
+  width: 100%;
+  height: auto;
+  bottom: 0; }
+
+/*# sourceMappingURL=cup-detail.component.css.map */

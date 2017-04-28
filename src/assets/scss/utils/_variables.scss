@@ -1,0 +1,34 @@
+
+
+/* color */
+$main-color: #00C4C4;
+$main-color-light: lighten($main-color, 20%);
+$main-color-dark: darken($main-color, 20%);
+
+
+$sub-color: violet; //not fixed
+$point-color: orange; //not fixed
+$bg-color: #efefef;
+
+
+$fontCol-black: black;
+$fontCol-white: white;
+$fontCol-blockquote: darkgray;
+$fontCol-aquamarine: #22B2A1;
+$bgCol-intro: $main-color;
+$bgCol-instruction: $bg-color;
+
+
+/* color : test lab */
+// material color theme
+$grey :#9E9E9E;
+$grey-50 :#FAFAFA;
+$grey-100 :#F5F5F5;
+$grey-200 :#EEEEEE;
+$grey-300 :#E0E0E0;
+$grey-400 :#BDBDBD;
+$grey-500 :#9E9E9E;
+$grey-600 :#757575;
+$grey-700 :#616161;
+$grey-800 :#424242;
+$grey-900 :#212121;

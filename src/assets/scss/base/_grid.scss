@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+/* grid */
+$gutter-width: 20px;                    //여백 가로 최소 사이즈
+$column-width: 60px;                    //단 가로 최소 사이즈
+$baseline-height: 30px;                 //세로 기준 사이즈
+$margin-height1: $baseline-height/2;    //15px
+$margin-height2: $baseline-height;      //30px
+$margin-height3: $baseline-height*2;    //60px
+$margin-height4: $baseline-height*3;    //90px
+
+
+header {
+    @include testBg();
+}
+
+#wrap {
+    @include size(960px, auto);
+    margin: 0 auto;
+
+    .content {
+        @include size(100%, auto);
+        margin: 10px auto;
+
+    }
+}
+
+footer {
+    @include testBg();
+    @include size(100%, auto);
+    
+    bottom: 0;
+}
