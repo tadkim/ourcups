@@ -1,6 +1,8 @@
-// @charset "utf-8";
+
 
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+@import '../../fonts/nanumsquare';
 
 
 $fontSize0: 100%; //body
@@ -17,52 +19,6 @@ $lineHeight2: 1.5; //.value_index, .value_data
 
 $letterSpacing0: -0.05rem; //.small_title
 
-// $font-sans: 'Noto Sans KR',sans-serif; //default font-family
+$font-sans: 'NanumSquare', sans-serif; //default font-family
 // $font-serif: 'Iropke Batang', serif;
 
-
-
-
-
-/*
-* 나눔스퀘어
-* Nanum Square
-*
-* SIL Open Font License 1.1
-* http://help.naver.com/ops/step2/faq.nhn?faqId=15879
-*/
-
-/*
-
-@font-face {
-  font-family: 'Nanum Square';
-  src: local('Nanum Square'), local('NanumSquare'), local('나눔스퀘어'), local(''), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nanum Square';
-  src: local('Nanum Square'), local('NanumSquare'), local('나눔스퀘어'), local(''), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-Regular.ttf') format('truetype'), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nanum Square';
-  src: local('Nanum Square'), local('NanumSquare'), local('나눔스퀘어'), local(''), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-Bold.ttf') format('truetype'), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Nanum Square';
-  src: local('Nanum Square'), local('NanumSquare'), local('나눔스퀘어'), local(''), url('//hangul.online/static/fonts/nanum-square/Nanum-Square-ExtraBold.ttf') format('truetype');
-  font-weight: 800;
-  font-style: normal;
-}
-
-.nanum-square {
-  font-family: 'Nanum Square', sans-serif;
-}
-*/
