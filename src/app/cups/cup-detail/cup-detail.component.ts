@@ -12,7 +12,7 @@ import { Cup } from '../../model/cup';
 export class CupDetailComponent implements OnInit {
   cup: Cup;
   cupId: number;
-
+  
   constructor(
     private appService: AppService,
     private activatedRoute: ActivatedRoute) { }

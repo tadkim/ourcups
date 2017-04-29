@@ -92,4 +92,9 @@ footer {
   height: auto;
   bottom: 0; }
 
+.cup-slider-container {
+  width: 980px;
+  height: auto;
+  margin: 0 auto; }
+
 /*# sourceMappingURL=cup-detail.component.css.map */

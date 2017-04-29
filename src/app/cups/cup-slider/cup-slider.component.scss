@@ -1,1 +1,37 @@
 @import '../../../assets/scss/global';
+
+$currentCol: red;
+$nearCol: lighten($currentCol, 20%);
+
+.slider-container {
+    @include size(100%, auto);
+    @include testBorder();
+    @include flex(flex, row nowrap);
+    justify-content: space-around;
+    text-align: center;
+    
+
+
+    .slider-item {
+        @include size(2%, 100px);
+        @include testBg();
+        margin: 2px;
+        flex-shrink: 0;
+
+        &:nth-of-type(8){
+          background-color: $nearCol;
+        }
+
+        &:nth-of-type(9){
+          background-color: $currentCol;
+        }
+
+        &:nth-of-type(10){
+          background-color: $nearCol;
+        }
+    }
+
+
+
+}
+

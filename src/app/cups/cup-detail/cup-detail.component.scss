@@ -1,1 +1,7 @@
 @import '../../../assets/scss/global';
+
+
+.cup-slider-container {
+    @include size(980px, auto);
+    margin: 0 auto;
+}
