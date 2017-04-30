@@ -75,7 +75,11 @@ a {
 
 /* grid */
 header {
-  background-color: rgba(50, 0, 255, 0.1); }
+  background-color: rgba(236, 236, 236, 0.5);
+  width: 100%;
+  height: 100px;
+  left: 0;
+  top: 0; }
 
 #wrap {
   width: 960px;
@@ -87,9 +91,10 @@ header {
     margin: 10px auto; }
 
 footer {
-  background-color: rgba(50, 0, 255, 0.1);
+  background-color: rgba(236, 236, 236, 0.5);
   width: 100%;
-  height: auto;
+  height: 100px;
+  left: 0;
   bottom: 0; }
 
 /*# sourceMappingURL=footer.component.css.map */

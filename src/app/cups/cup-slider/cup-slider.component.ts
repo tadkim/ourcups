@@ -31,55 +31,83 @@ export class CupSliderComponent implements OnInit {
 
   setReOrder() {
     
-    let count = { prev: 0, next: 0 };
-    let firstIndex = 0;
-    let lastIndex = this.cups.length-1;
-    let curIndex = this.selectedIndex;
+    
     
 
-    let compute = 0;
-    let pointPrev = 8;
+    let firstIndex = 0;                     // 첫 index
+    let lastIndex = this.cups.length-1;     // 마지막 index   : length는 15지만, id는 14까지있기 때문.
+    let curIndex = this.selectedIndex;      // 현재 선택 index
+    
+    const divideIndex = 7; //어디를 중간으로 할지를 결정하는 기준점.
+
+    let pointPrev = divideIndex;
     let pointNext = 1;
+    let count = { prev: 0, next: 0 };
 
+
+    let prevArr = [];
+    let currentArr = [this.cups[curIndex]];
+    let nextArr = [];
+    
+    
 
     
-    // 새롭게 정렬한 cup 을 넣을 배열 생성
-    // 0 to 7     
-    for (let i = 0; i < 8; i++){
+    
+    // prevArr : 0 ~ 7     
+    for (let i = 0; i < divideIndex; i++){
       let prev = curIndex - pointPrev;
-      
       if (prev < 0) {
         prev = lastIndex - count.prev;
         count.prev++;
       }
-      console.log(prev);
-      this.reOrderArr.push(this.appService.getCup(prev));
+      prevArr.push(this.cups[prev]);
       pointPrev--;
     }
-    // 현재 선택한 cup. (가운데 배치하기 위함)
-    this.reOrderArr.push(this.appService.getCup(curIndex));
+
+
+    
+    
+    (curIndex === 0)
+      ? prevArr.sort((a, b) => { return a.id - b.id; })       // 현재 인덱스가 0인 경우
+      : isNeedOrdering();                                     // 현재 인덱스가 0이 아닌경우
+    
+    
+    
+    
+    function isNeedOrdering() {
+      let isZero = prevArr.findIndex((el) => { return el.id === 0; });        // id 0 을 찾는다.
+      if (isZero !== -1) { reOrdering(); }                                    // 있다면 0 이전 원소만 재정렬한다.
+
+      function reOrdering() { 
+          let toSliceArr = prevArr.slice(0, isZero);                          // 이전 목록의 첫 인덱스부터 0인덱싱까지 따로 뽑아 배열 생성.
+          toSliceArr.sort((a, b) => { return a.id - b.id; });
+
+          for (let i = 0; i < toSliceArr.length; i++){
+            prevArr[i] = toSliceArr[i];
+          }  
+      }
+    }
+
+
+    
+    
+    
 
 
 
-
-    // 8 to 15
-    for (let j = 8; j < lastIndex; j++){
+    // nextArr : 8 to 15
+    for (let j = divideIndex; j < lastIndex; j++){
       let next = curIndex+pointNext;
       if (next > lastIndex) {
         next = firstIndex + count.next;
         count.next++;
       }
-      console.log(next);
-      this.reOrderArr.push(this.appService.getCup(next));
+      nextArr.push(this.cups[next]);
       pointNext++;
     }
 
-
-    console.log(this.cups[curIndex]);
-
-    for (let index = 0; index < this.reOrderArr.length; index++){
-      console.log(this.reOrderArr[index].name);
-    }
+    //최종 Arr 형태
+    this.reOrderArr = prevArr.concat(currentArr, nextArr);
   }
 
 

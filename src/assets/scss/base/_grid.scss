@@ -12,6 +12,9 @@ $margin-height4: $baseline-height*3;    //90px
 
 header {
     @include testBg();
+    @include size(100%, 100px);
+    left:0;
+    top:0;
 }
 
 #wrap {
@@ -27,7 +30,8 @@ header {
 
 footer {
     @include testBg();
-    @include size(100%, auto);
+    @include size(100%, 100px);
+    left:0;
+    bottom:0;
     
-    bottom: 0;
 }

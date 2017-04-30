@@ -1,3 +1,16 @@
 @charset "utf-8";
 
 @import 'assets/scss/main';
+
+
+body { 
+    background-color: $bg-app;
+}
+
+
+#wrap {
+    background-color: $bg-wrap;
+    .content {
+        @include testBg();
+    }
+}

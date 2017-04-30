@@ -1,7 +1,22 @@
 @import '../../../assets/scss/global';
 
 
+
+.cup-detail-container {
+    @include size(100%, 400px);
+    margin: 30px auto;
+    
+    @include testBg();
+    @include testShadow();
+
+}
+
+
 .cup-slider-container {
-    @include size(980px, auto);
-    margin: 0 auto;
+    @include size(100%, auto);
+    margin: 30px auto;
+
+    @include testShadow();
+    overflow:hidden;
+    
 }

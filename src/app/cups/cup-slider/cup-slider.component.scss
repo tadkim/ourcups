@@ -1,32 +1,40 @@
 @import '../../../assets/scss/global';
 
-$currentCol: red;
+$currentCol: purple;
 $nearCol: lighten($currentCol, 20%);
 
 .slider-container {
     @include size(100%, auto);
-    @include testBorder();
+    
     @include flex(flex, row nowrap);
     justify-content: space-around;
     text-align: center;
     
+    @include testShadow();
 
 
     .slider-item {
-        @include size(2%, 100px);
+        @include size(8%, 160px);
         @include testBg();
+        @include testShadow();
+        @include testTransition();
+
         margin: 2px;
         flex-shrink: 0;
 
-        &:nth-of-type(8){
+        span {
+          font-size: 8px;
+        }
+
+        &:nth-of-type(7){
           background-color: $nearCol;
         }
 
-        &:nth-of-type(9){
+        &:nth-of-type(8){
           background-color: $currentCol;
         }
 
-        &:nth-of-type(10){
+        &:nth-of-type(9){
           background-color: $nearCol;
         }
     }
@@ -34,4 +42,3 @@ $nearCol: lighten($currentCol, 20%);
 
 
 }
-
