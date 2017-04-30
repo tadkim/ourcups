@@ -102,17 +102,16 @@ footer {
   height: auto;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
-  text-align: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
+  justify-content: space-around; }
   .slider-container .slider-item {
     width: 8%;
     height: 160px;
+    flex-shrink: 0;
+    margin: 2px;
+    text-align: center;
     background-color: rgba(236, 236, 236, 0.5);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    margin: 2px;
-    flex-shrink: 0; }
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
     .slider-container .slider-item:hover {
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
     .slider-container .slider-item span {

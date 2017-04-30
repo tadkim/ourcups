@@ -5,22 +5,22 @@ $nearCol: lighten($currentCol, 20%);
 
 .slider-container {
     @include size(100%, auto);
-    
     @include flex(flex, row nowrap);
     justify-content: space-around;
-    text-align: center;
-    
-    @include testShadow();
-
 
     .slider-item {
         @include size(8%, 160px);
+        flex-shrink: 0;
+
+        margin: 2px;
+        text-align: center;
+        
+
+
         @include testBg();
         @include testShadow();
         @include testTransition();
-
-        margin: 2px;
-        flex-shrink: 0;
+        
 
         span {
           font-size: 8px;

@@ -21,11 +21,15 @@ export class CupDetailComponent implements OnInit {
     this.activatedRoute.params.forEach((urlParameters) => {
       this.cupId = parseInt(urlParameters['id']);  
     });
-
     this.getCup();
+    this.gotoTop();
   }
 
   getCup() {
     this.cup = this.appService.getCup(this.cupId);
+  }
+
+  gotoTop() {
+    window.scrollTo(0, 0);
   }
 }

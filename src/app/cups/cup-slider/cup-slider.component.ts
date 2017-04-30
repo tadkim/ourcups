@@ -17,23 +17,27 @@ export class CupSliderComponent implements OnInit {
   
   constructor(
     private appService: AppService,
-    private activatedRoute: ActivatedRoute) { }
+    private activatedRoute: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.activatedRoute.params.forEach((urlParameters) => {
       this.selectedIndex = parseInt(urlParameters['id']);
     });
     this.cups = this.appService.getCups();
-    
     this.setReOrder();
-    
   }
 
-  setReOrder() {
-    
-    
-    
 
+  
+  getTargetURL(id: number) {
+    return '/detail/' + id;
+  }
+
+  
+
+  setReOrder() {
     let firstIndex = 0;                     // 첫 index
     let lastIndex = this.cups.length-1;     // 마지막 index   : length는 15지만, id는 14까지있기 때문.
     let curIndex = this.selectedIndex;      // 현재 선택 index

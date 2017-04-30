@@ -1,18 +1,11 @@
 <div class="slider-container">
-  <!--
-  <div class="slider-item"
-  *ngFor="let cup of cups">
-    {{cup.name}}
-  </div>
-  -->
-
-
-
-  <div class="slider-item"
-  *ngFor="let reorder of reOrderArr">
+ 
+  <a class="slider-item"
+    [href]="getTargetURL(reorder.id)"
+    *ngFor="let reorder of reOrderArr">
     <span>{{reorder.name}}</span>
     <br/>
     {{reorder.id}}
-  </div>
+  </a>
 
 </div>
