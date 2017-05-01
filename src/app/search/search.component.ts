@@ -11,9 +11,10 @@ import { CompleterService, CompleterData } from 'ng2-completer';
 @Component({
     selector: 'search-box',
     template: `
-            <p>Search color</p>
+            <img src="../../assets/images/icons/search.png"/>
             <ng2-completer [(ngModel)]="searchStr" [datasource]="dataService" [minSearchLength]="0"></ng2-completer>
-    `
+    `,
+    styleUrls: ['./search.component.css']
 })
     
 export class SearchComponent {

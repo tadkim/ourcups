@@ -25,6 +25,7 @@ import { SearchComponent } from './search/search.component';
 // lib
 
 import { Ng2CompleterModule } from "ng2-completer";
+import { ShareComponent } from './common/share/share.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { Ng2CompleterModule } from "ng2-completer";
     CupsComponent,
     CupDetailComponent,
     CupSliderComponent,
-    SearchComponent
+    SearchComponent,
+    ShareComponent
   ],
   imports: [
     BrowserModule,

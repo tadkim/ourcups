@@ -1,18 +1,78 @@
 @import '../../../assets/scss/global';
 
 
+$detailFont: 12px;
 
-.cup-detail-container {
+
+
+$viewer-width: 68%;
+$viewer-height: 80%;
+
+$spec-width: 30%;
+$spec-height: 80%;
+
+$spec-bottom-width: 68%;
+$spec-bottom-height: 20%;
+
+$share-width: 30%;
+$share-height: 20%;
+
+
+.container {
     @include size(100%, 400px);
+    @include flex(flex, row wrap);
+    justify-content: space-between;
+
+    font-size: $detailFont;
+
+    .viewer { 
+        
+        @include testShadow();
+        @include size(68%, 80%); 
+        @include flex(flex, row wrap);
+        justify-content: space-between;
+        padding:4px;
+
+
+        > div {
+            @include testBorder();
+        }
+        // .top { @include size(100%, 10%); }
+        .left, .right { @include size(15%, 80%); }
+        .view { @include size(60%, 80%); }
+        
+        
+        .top, .bottom { 
+            @include size(100%, 10%); 
+            text-align:center;
+
+            img { 
+                @include size(16px, auto);
+            }
+        }
+
+    }
+
+    .spec { 
+        @include testShadow();
+        @include size(30%, 80%); }
+    .spec-bottom { 
+        @include testShadow();
+        @include size(70%, 20%); 
+        @include flex(flex, row nowrap);
+        img { @include size(14px); }
+    } //임시 크기
+    .share { 
+        @include testShadow();
+        @include size(30%, 20%); 
+        
+
+    } //임시 크기 
+
     margin: 30px auto;
     
     @include testBg();
     
-
-    text-align: center;
-    h1{ font-size:80px;
-    vertical-align: middle; }
-
 }
 
 
@@ -21,5 +81,5 @@
     margin: 200px auto;
 
     @include testShadow();
-    overflow-x:scroll;
+    
 }

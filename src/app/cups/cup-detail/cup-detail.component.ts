@@ -32,4 +32,8 @@ export class CupDetailComponent implements OnInit {
   gotoTop() {
     window.scrollTo(0, 0);
   }
+
+  onTooltip() {
+    console.log("on Tooltip!!");
+  }
 }

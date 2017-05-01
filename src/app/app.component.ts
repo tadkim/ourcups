@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '모두의 생리컵';
+  title = '모여라 생리컵';
 
   
 }

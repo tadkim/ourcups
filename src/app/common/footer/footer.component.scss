@@ -1,1 +1,55 @@
 @import '../../../assets/scss/global';
+
+
+$footer-fontSize: 13px;
+
+.container {
+    @include size(100%, 80%);
+    @include flex(flex, row nowrap);
+    justify-content: space-around;
+    
+
+    font-size: $footer-fontSize;
+
+    
+
+    > div {
+        @include size(33%, 100%);
+        @include flex(flex, column nowrap);
+    }
+
+    .about {
+        @include testBorder();
+        .comment {
+            @include size(100%, 60%);
+        }
+        .studio-info {
+            @include size(100%, 40%);
+            @include testBorder();
+        }
+    }
+
+
+    .info {
+        @include testBorder();
+        vertical-align: bottom;
+        
+        a { 
+            @include size(100%, 20%);
+            @include testBorder();
+            &:nth-of-type(2){  @include size(100%, 40%); }
+        }
+    }
+
+    .copyright {
+        @include testBorder();
+        img { @include size(20%, auto); }
+        .license {
+             @include size(40%, auto);
+             font-size: 12px;
+        }
+    }
+
+
+
+}

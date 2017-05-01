@@ -30,13 +30,13 @@ export class CupSliderComponent implements OnInit {
   }
 
 
-  
+  // Relative Content Navigate
   getTargetURL(id: number) {
     return '/detail/' + id;
   }
 
   
-
+  // reordering base on selectedIndex.
   setReOrder() {
     let firstIndex = 0;                     // 첫 index
     let lastIndex = this.cups.length-1;     // 마지막 index   : length는 15지만, id는 14까지있기 때문.

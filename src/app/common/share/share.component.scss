@@ -1,0 +1,16 @@
+@import '../../../assets/scss/global';
+
+.container {
+    @include size(100px, auto);
+    @include flex(flex, row nowrap);
+    justify-content: space-around;
+
+    
+    a {
+        @include size(30px, 30px);
+        @include border-radius(10px);
+        img { 
+            @include size(30px, auto);
+        }
+    }
+}
