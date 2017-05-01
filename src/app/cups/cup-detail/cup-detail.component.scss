@@ -21,6 +21,7 @@ $share-height: 20%;
 
 // icon
 $icon-size: 30px;
+$icon-size-info: 14px;
 
 
 
@@ -41,19 +42,28 @@ $icon-size: 30px;
 
 
         > div {
-            @include testBorder();
+            @include testShadow();
         }
-        // .top { @include size(100%, 10%); }
-        .left, .right { @include size(15%, 80%); }
+
+        .left, .right { 
+            @include size(15%, 80%);
+            @include flex(flex, column nowrap);
+            justify-content: space-around;
+
+        }
         .view { @include size(60%, 80%); }
         
         
         .top, .bottom { 
             @include size(100%, 10%); 
+            @include flex(flex, row nowrap);
+            justify-content: center;
+            align-items: center;
+
             text-align:center;
 
             img { 
-                @include size(16px, auto);
+                @include size($icon-size-info, $icon-size-info);
             }
         }
 
@@ -63,24 +73,37 @@ $icon-size: 30px;
         @include testShadow();
         @include size(30%, 80%); 
         @include flex(flex, row wrap);
+        justify-content: space-around;
+        padding:4px;
 
         img { 
             @include size($icon-size, auto);
         }
 
         .brand{
-            @include size(100%, auto);
+            @include size(90%, auto);
+            align-self: center;
         }
+
+        
     }
+
     .spec-bottom { 
         @include testShadow();
-        @include size(70%, 20%); 
+        @include size($spec-bottom-width, $spec-bottom-height); 
         @include flex(flex, row nowrap);
-        img { @include size(14px, auto); }
-    } //임시 크기
+        justify-content: space-around;
+        align-items: center;
+        padding:4px;
+
+        img { @include size(14px, auto); vertical-align: text-top; }
+    }
+    
+     //임시 크기
     .share { 
         @include testShadow();
-        @include size(30%, 20%); 
+        @include size(30%, 20%);
+        padding:4px; 
         
 
     } //임시 크기 

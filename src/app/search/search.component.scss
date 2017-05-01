@@ -4,4 +4,6 @@
 img {
     @include size(20px, 20px);
     vertical-align: middle;
+    position: absolute;
+    right:10%;   
 }

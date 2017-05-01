@@ -16,36 +16,41 @@ $footer-fontSize: 13px;
     > div {
         @include size(33%, 100%);
         @include flex(flex, column nowrap);
+        
+        @include testShadow();
+        padding:10px;
     }
 
     .about {
-        @include testBorder();
+        
+        
         .comment {
             @include size(100%, 60%);
         }
         .studio-info {
             @include size(100%, 40%);
-            @include testBorder();
+            @include testShadow();
         }
     }
 
 
     .info {
-        @include testBorder();
+        // @include testShadow();
+        
         vertical-align: bottom;
         
         a { 
             @include size(100%, 20%);
-            @include testBorder();
             &:nth-of-type(2){  @include size(100%, 40%); }
         }
     }
 
     .copyright {
-        @include testBorder();
+        // @include testShadow();
+        
         img { @include size(20%, auto); }
         .license {
-             @include size(40%, auto);
+             @include size(100%, auto);
              font-size: 12px;
         }
     }
