@@ -18,6 +18,12 @@ $share-width: 30%;
 $share-height: 20%;
 
 
+
+// icon
+$icon-size: 30px;
+
+
+
 .container {
     @include size(100%, 400px);
     @include flex(flex, row wrap);
@@ -55,12 +61,22 @@ $share-height: 20%;
 
     .spec { 
         @include testShadow();
-        @include size(30%, 80%); }
+        @include size(30%, 80%); 
+        @include flex(flex, row wrap);
+
+        img { 
+            @include size($icon-size, auto);
+        }
+
+        .brand{
+            @include size(100%, auto);
+        }
+    }
     .spec-bottom { 
         @include testShadow();
         @include size(70%, 20%); 
         @include flex(flex, row nowrap);
-        img { @include size(14px); }
+        img { @include size(14px, auto); }
     } //임시 크기
     .share { 
         @include testShadow();
