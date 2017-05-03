@@ -9,11 +9,11 @@ export class Cup {
   color: string[];
   officialsite: string;
   country: string;
-  certification: string[];
+  country_eng: string;
   price: string;
 
   externalDiameter: number;
-  totalLenth: number;
+  totalLength: number;
   bodyLength: number;
   topToHole: string;
 

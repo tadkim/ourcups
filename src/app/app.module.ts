@@ -17,15 +17,18 @@ import { CupSliderComponent } from './cups/cup-slider/cup-slider.component';
 //common
 import { FooterComponent } from './common/footer/footer.component';
 import { Page404Component } from './common/page404/page404.component';
-
-import { AppService } from './app.service';
+import { ShareComponent } from './common/share/share.component';
+import { TooltipComponent } from './common/tooltip/tooltip.component';
 import { SearchComponent } from './search/search.component';
 
 
-// lib
+//Service
+import { AppService } from './app.service';
 
+// lib
 import { Ng2CompleterModule } from "ng2-completer";
-import { ShareComponent } from './common/share/share.component';
+
+
 
 @NgModule({
   declarations: [
@@ -36,7 +39,8 @@ import { ShareComponent } from './common/share/share.component';
     CupDetailComponent,
     CupSliderComponent,
     SearchComponent,
-    ShareComponent
+    ShareComponent,
+    TooltipComponent
   ],
   imports: [
     BrowserModule,

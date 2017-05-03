@@ -2,7 +2,10 @@
     <div class="cup"
         (click)="gotoDetail(cup.id)"
         *ngFor="let cup of cups">
-        {{ cup.name }}
+         
+        <img [src]="'../assets/images/cups/'+ cup.imgUrls">
+        <p class="ko"> {{ cup.name }} </p>
+        <p class="en" > {{ cup.name_eng }} </p>
     </div>
 </div>
 

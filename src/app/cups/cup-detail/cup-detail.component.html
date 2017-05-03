@@ -2,18 +2,25 @@
 <section class="container">
   
   <div class="viewer">
-    <div class="top"> 바깥 지름 : </div>
+
+    <div class="top"> 바깥 지름 : {{ cup.externalDiameter }} ml </div>
+
     <div class="left">
-      <p>최상단에서 공기구멍까지의 거리 :</p>
-      <p> 전체 길이 :</p>
+      <p> 최상단에서 공기구멍까지의 거리 : {{ cup.topToHole }}  ml </p>
+      <p> 전체 길이 : {{ cup.totalLength }} mm</p>
     </div>
     
-    <div class="view">이미지 </div>
-    <div class="right">
-      <p> 컵 길이 : </p>
-      <p> 손잡이 길이 길이 : </p>
+    <div class="view">
+      <img [src]="imgPath + '/cups/' + cup.imgUrls"/>
     </div>
+
+    <div class="right">
+      <p> 컵 길이 :  {{ cup.bodyLength }} mm </p>
+      <p> 손잡이 길이 길이 : {{ cup.stemLength }} mm </p>
+    </div>
+
     <div class="bottom">
+      <!-- {{ cup.color[0] }} -->
        <img src="../../assets/images/icons/brightness.png" alt="색상 선택 1"/>
        <img src="../../assets/images/icons/brightness.png" alt="색상 선택 2"/>
        <img src="../../assets/images/icons/brightness.png" alt="색상 선택 3"/>
@@ -24,22 +31,24 @@
 
   <div class="spec">
     <div class="brand">
-      <span> 페미사이클 청소년용 </span> <span> Femme cycle Teen</span> <br/>
-      <img src="../../assets/images/icons/home.png"/>
+      <span> {{ cup.name }} </span> <span> {{ cup.name_eng }} </span> <br/>
+      <a [href]="cup.officialsite">
+        <img class="icon" src="../../assets/images/icons/home.png"/>
+      </a>
     </div>
 
     <ul>
       <li>제조국</li>
       <li>소재 </li>
-      <li>공홈인증정보 </li>
       <li>공홈 가격 </li>
     </ul>
 
     <ul>
-      <li><img src="#" alt="">국기 + 미국</li>
-      <li>의료용 실리콘</li>
-      <li>FDA, USD, DID, CA, ISO, USD </li>
-      <li> $ 35.00 </li>
+      <li><img class="flag" [src]="imgPath + '/flags/' + cup.country_eng + '.png'" alt="국기"> {{ cup.country }}</li>
+      <li> {{ cup.material }} </li>
+      <li> {{ cup.price }}  
+        <img id="price" class="info" src="../../assets/images/icons/info.png"/>
+      </li>
     </ul>
 
   </div>
@@ -48,14 +57,20 @@
       <li>공기구멍 형태 </li>
       <li>전체 용량 </li>
       <li>공기구멍까지의 용량 </li>
-      <li>손잡이 형태 <img (click)="onTooltip()" src="../../assets/images/icons/info.png"/> </li>
+      <li>손잡이 형태 
+        <img id="tooltip-stem" 
+           src="../../assets/images/icons/info.png"
+           (mouseenter)="onTooltip('on')"
+           (mouseleave)="onTooltip('off')"
+           > 
+      </li>
     </ul>
 
     <ul>
-      <li>없음</li>
-      <li>20ml</li>
-      <li>18ml </li>
-      <li>고리형</li>
+      <li> {{ cup.stemType }} </li>
+      <li> {{ cup.totalCapacity }} </li>
+      <li> {{ cup.airholeCapacity }} </li>
+      <li> {{ cup.airholeType }} </li>
     </ul>
 
   </div>
@@ -68,3 +83,5 @@
 <section class="cup-slider-container">
   <app-cup-slider></app-cup-slider> 
 </section>
+
+<app-tooltip [pos]="tooltipPos"></app-tooltip>

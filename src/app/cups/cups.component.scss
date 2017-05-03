@@ -3,7 +3,7 @@
 .cup-container {
     @include size(100%, auto);
     @include flex(flex, row wrap);
-    margin: 0 auto;
+    margin: 100px auto;
     
     
     
@@ -11,8 +11,15 @@
         @include testBg();
         @include testShadow();
         @include testTransition();
-        @include size(22%, 200px);
+        @include size(28%, 200px);
+        padding:10px;
         
+        img { 
+            @include size(auto, 80%);
+        }
+        p {
+            
+        }
         margin:10px;
         
 

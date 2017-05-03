@@ -2,13 +2,15 @@
 
 
 $footer-fontSize: 13px;
+$bgCol: black;
 
 .container {
     @include size(100%, 80%);
     @include flex(flex, row nowrap);
-    justify-content: space-around;
-    
+    justify-content: space-between;
+    margin-top:200px;
 
+    background-color: $bgCol;
     font-size: $footer-fontSize;
 
     
@@ -17,7 +19,8 @@ $footer-fontSize: 13px;
         @include size(33%, 100%);
         @include flex(flex, column nowrap);
         
-        @include testShadow();
+        @include testBg();
+        margin:2px;
         padding:10px;
     }
 
@@ -29,13 +32,13 @@ $footer-fontSize: 13px;
         }
         .studio-info {
             @include size(100%, 40%);
-            @include testShadow();
+            
         }
     }
 
 
     .info {
-        // @include testShadow();
+        
         
         vertical-align: bottom;
         
@@ -46,7 +49,7 @@ $footer-fontSize: 13px;
     }
 
     .copyright {
-        // @include testShadow();
+        
         
         img { @include size(20%, auto); }
         .license {

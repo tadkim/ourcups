@@ -20,8 +20,12 @@ $share-height: 20%;
 
 
 // icon
-$icon-size: 30px;
-$icon-size-info: 14px;
+$icon-size: 20px;
+$icon-info-size: 14px;
+
+//flag
+$flag-size: 16px;
+
 
 
 
@@ -29,7 +33,8 @@ $icon-size-info: 14px;
     @include size(100%, 400px);
     @include flex(flex, row wrap);
     justify-content: space-between;
-
+    margin: 100px auto;
+    
     font-size: $detailFont;
 
     .viewer { 
@@ -51,7 +56,15 @@ $icon-size-info: 14px;
             justify-content: space-around;
 
         }
-        .view { @include size(60%, 80%); }
+        .view { 
+            @include size(60%, 80%);
+            @include flex(flex, row nowrap);
+            justify-content: center;
+            
+            img {
+                @include size(auto, 100%);
+            }
+        }
         
         
         .top, .bottom { 
@@ -63,7 +76,7 @@ $icon-size-info: 14px;
             text-align:center;
 
             img { 
-                @include size($icon-size-info, $icon-size-info);
+                @include size($icon-info-size, auto);
             }
         }
 
@@ -76,9 +89,9 @@ $icon-size-info: 14px;
         justify-content: space-around;
         padding:4px;
 
-        img { 
-            @include size($icon-size, auto);
-        }
+        .icon {  @include size($icon-size, auto); }
+        .flag { @include size($flag-size, auto); }
+        .info { @include size($icon-info-size, auto); vertical-align: text-top; }
 
         .brand{
             @include size(90%, auto);

@@ -36,4 +36,9 @@ export class CupsComponent implements OnInit {
     this.router.navigate(link);
   }
 
+  getBg(url: string) {
+    let imgUrl = 'url("/images/cups/' + url + '");';
+    return imgUrl;
+  }
+
 }

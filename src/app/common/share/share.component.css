@@ -74,6 +74,9 @@ a {
   font-family: 'Nanum Square', sans-serif; }
 
 /* grid */
+body {
+  margin: 0 !important; }
+
 header {
   background-color: rgba(236, 236, 236, 0.5);
   width: 100%;
@@ -93,7 +96,7 @@ header {
 footer {
   background-color: rgba(236, 236, 236, 0.5);
   width: 100%;
-  height: 100px;
+  height: auto;
   left: 0;
   bottom: 0; }
 

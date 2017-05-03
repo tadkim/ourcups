@@ -1,0 +1,13 @@
+@import '../../../assets/scss/global';
+
+.container {
+    // @include size(30%, 200px);
+    @include testBg();
+    @include testShadow();
+
+    position:absolute;
+   
+}
+
+
+

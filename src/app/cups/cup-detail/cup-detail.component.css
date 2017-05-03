@@ -74,6 +74,9 @@ a {
   font-family: 'Nanum Square', sans-serif; }
 
 /* grid */
+body {
+  margin: 0 !important; }
+
 header {
   background-color: rgba(236, 236, 236, 0.5);
   width: 100%;
@@ -93,7 +96,7 @@ header {
 footer {
   background-color: rgba(236, 236, 236, 0.5);
   width: 100%;
-  height: 100px;
+  height: auto;
   left: 0;
   bottom: 0; }
 
@@ -103,6 +106,7 @@ footer {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  margin: 100px auto;
   font-size: 12px;
   margin: 30px auto;
   background-color: rgba(236, 236, 236, 0.5); }
@@ -124,7 +128,13 @@ footer {
       justify-content: space-around; }
     .container .viewer .view {
       width: 60%;
-      height: 80%; }
+      height: 80%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center; }
+      .container .viewer .view img {
+        width: auto;
+        height: 100%; }
     .container .viewer .top, .container .viewer .bottom {
       width: 100%;
       height: 10%;
@@ -135,7 +145,7 @@ footer {
       text-align: center; }
       .container .viewer .top img, .container .viewer .bottom img {
         width: 14px;
-        height: 14px; }
+        height: auto; }
   .container .spec {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     width: 30%;
@@ -144,9 +154,16 @@ footer {
     flex-flow: row wrap;
     justify-content: space-around;
     padding: 4px; }
-    .container .spec img {
-      width: 30px;
+    .container .spec .icon {
+      width: 20px;
       height: auto; }
+    .container .spec .flag {
+      width: 16px;
+      height: auto; }
+    .container .spec .info {
+      width: 14px;
+      height: auto;
+      vertical-align: text-top; }
     .container .spec .brand {
       width: 90%;
       height: auto;

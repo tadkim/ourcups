@@ -9,6 +9,7 @@ $margin-height2: $baseline-height;      //30px
 $margin-height3: $baseline-height*2;    //60px
 $margin-height4: $baseline-height*3;    //90px
 
+body { margin: 0 !important; }
 
 header {
     @include testBg();
@@ -30,7 +31,7 @@ header {
 
 footer {
     @include testBg();
-    @include size(100%, 100px);
+    @include size(100%, auto);
     left:0;
     bottom:0;
     
